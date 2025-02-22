@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: "Lady Starlight";
-  src: local("Lady Starlight"),
-    url("./public/fonts/Lady Starlight.otf") format("otf");
+  src: local("Lady Starlight"), url("./public/Lady Starlight.otf") format("otf");
 }
 
 :root {

@@ -55,6 +55,7 @@
 }
 
 .shape-img {
+  margin-right: 2vw;
   position: relative;
   width: clamp(150px, 12vw, 220px);
   height: clamp(150px, 12vw, 220px);
