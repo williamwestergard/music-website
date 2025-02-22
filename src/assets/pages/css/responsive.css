@@ -1,0 +1,305 @@
+@media screen and (max-width: 1130px) {
+  body {
+    overflow: auto;
+  }
+
+  .left-side-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    height: auto;
+  }
+
+  .header {
+    margin-top: 4vh;
+    margin-left: 4vw;
+    position: relative;
+    top: 0;
+    line-height: 10vh;
+  }
+  .header h1 {
+    font-family: "Lady Starlight";
+    letter-spacing: 4px;
+    font-size: 4.8rem;
+    line-height: 9.2vh;
+    margin: 0;
+    padding: 0;
+  }
+  .header p {
+    line-height: 0.5vh;
+    font-size: 0.95rem;
+  }
+  .information {
+    display: none;
+  }
+  .shape-img {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+
+  .right-side-container {
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    position: relative;
+    top: 30vh;
+  }
+
+  .filter {
+    position: absolute;
+    margin-top: 13vh;
+    margin-right: 2vw;
+    top: 22vh;
+    left: 0vw;
+    transform: translate(-0%, -0%);
+  }
+  .filter-1nd-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2 2vh;
+  }
+
+  .filter-2nd-row {
+    display: flex;
+    align-items: center;
+    margin-left: 1vh;
+  }
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8vh 1.8vh;
+    border: 2px solid #030303;
+    border-radius: 1000px;
+    margin-left: 1.6vh;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .filter-button p {
+    position: relative;
+    top: 0px;
+  }
+
+  .music-header {
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 2vw;
+    width: 100%;
+    top: 0;
+    line-height: 10vh;
+    transform: translate(-0%, -45%);
+  }
+  .music-header h1 {
+    color: #030303;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    line-height: 7vh;
+  }
+  .music-header p {
+    color: #030303;
+    line-height: 0vh;
+    font-size: clamp(1.5rem, 1.6vw, 1.9rem);
+    font-weight: 400;
+    position: relative;
+    left: 5px;
+  }
+
+  .songs-container {
+    top: 25vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 3px solid #030303;
+    padding: 1.5vh 4.2vh;
+    border-radius: 1000px;
+    margin-bottom: 2.8vh;
+    transform: translate(-0%, 10%);
+  }
+
+  .song-title {
+    color: #030303;
+    font-size: clamp(1.5rem, 1.9vw, 2.2rem);
+    font-weight: 450;
+    margin-right: 2vw;
+    position: relative;
+    top: -1px;
+  }
+
+  .song-tag {
+    display: none;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    letter-spacing: 1px;
+    font-weight: 550;
+    text-transform: uppercase;
+    padding: 0.25vh 2.2vh;
+    position: relative;
+    top: 0px;
+  }
+  .song-tag p {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0px;
+  }
+
+  .song-play-button {
+    position: absolute;
+    right: 1.3vw;
+    transform: translate(-50%, 0%);
+  }
+
+  .song-play-button-icon {
+    width: clamp(20px, 1.8vw, 35px);
+    height: auto;
+    position: relative;
+    top: 3px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  body {
+    overflow: auto;
+  }
+
+  .left-side-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    height: auto;
+  }
+
+  .header {
+    margin-top: 3vh;
+    margin-left: 4vw;
+    position: relative;
+    top: 0;
+  }
+  .header h1 {
+    font-family: "Lady Starlight";
+    letter-spacing: 4px;
+    font-size: 3.4rem;
+    line-height: 10vh;
+    margin: 0;
+    padding: 0;
+  }
+  .header p {
+    line-height: 0.2vh;
+    font-size: 0.9rem;
+  }
+  .information {
+    display: none;
+  }
+  .shape-img {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+
+  .right-side-container {
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    position: relative;
+    top: 30vh;
+  }
+
+  .filter {
+    position: absolute;
+    margin-top: 13vh;
+    margin-right: 2vw;
+    top: 26vh;
+    left: 0vw;
+    transform: translate(-0%, -0%);
+  }
+  .filter-1nd-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2 2vh;
+  }
+
+  .filter-2nd-row {
+    display: flex;
+    align-items: center;
+    margin-left: 1vh;
+  }
+
+  .filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8vh 1.8vh;
+    border: 2px solid #030303;
+    border-radius: 1000px;
+    margin-left: 1.6vh;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .filter-button p {
+    position: relative;
+    top: 0px;
+  }
+
+  .music-header {
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 2vw;
+    width: 100%;
+    top: 0;
+    line-height: 10vh;
+    transform: translate(-0%, -25%);
+  }
+  .music-header h1 {
+    color: #030303;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    line-height: 7vh;
+  }
+  .music-header p {
+    color: #030303;
+    line-height: 0vh;
+    font-size: clamp(1.5rem, 1.6vw, 1.9rem);
+    font-weight: 400;
+    position: relative;
+    left: 5px;
+  }
+
+  .songs-container {
+    top: 25vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 3px solid #030303;
+    padding: 1.5vh 4.2vh;
+    border-radius: 1000px;
+    margin-bottom: 2.8vh;
+    transform: translate(-0%, 40%);
+  }
+}

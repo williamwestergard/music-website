@@ -1,0 +1,143 @@
+.left-side-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 50vw;
+  position: sticky;
+  overflow: hidden;
+}
+
+.header {
+  margin-top: 4vh;
+  margin-left: 2vw;
+  position: relative;
+  top: 0;
+  line-height: 10vh;
+}
+.header h1 {
+  font-family: "Lady Starlight";
+  letter-spacing: 4px;
+  font-size: clamp(5.5rem, 7vw, 7.8rem);
+  line-height: clamp(10vh, 6vw, 11vh);
+  margin: 0;
+  padding: 0;
+}
+.header p {
+  line-height: 1vh;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+}
+
+.information {
+  height: 48vh;
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.information h2 {
+  font-size: clamp(1.4rem, 1.6vw, 1.9rem);
+  padding: 0;
+  margin: 0;
+}
+
+.information-p-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 2vw;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+}
+.information p {
+  font-size: clamp(0.5rem, 1vw, 1rem);
+  line-height: 2.7vh;
+  width: 200px;
+  margin-right: 5vw;
+}
+
+.shape-img {
+  position: relative;
+  width: clamp(150px, 12vw, 220px);
+  height: clamp(150px, 12vw, 220px);
+  animation: rotate 35s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  border-top: 2px solid white;
+}
+
+.footer-container {
+  height: 20vh;
+  margin-left: 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note {
+  width: 30%;
+  font-style: italic;
+  font-size: clamp(0.7rem, 0.8vw, 0.91rem);
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  line-height: 2.6vh;
+  position: relative;
+  top: 13px;
+}
+
+.wanna-collab {
+  border: 1px solid white;
+  border-radius: 1000px;
+  padding: 1.1vh 3.2vh;
+  align-self: center;
+  justify-content: center;
+  margin-right: 2vw;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+}
+
+.wanna-collab:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: 0.2s;
+}
+.wanna-collab h2 {
+  margin: 0;
+  margin-top: 7px;
+  margin-left: 5px;
+  font-size: clamp(1.3rem, 1.5vw, 1.7rem);
+  font-weight: 700;
+}
+.wanna-collab p {
+  margin: 0;
+  margin-left: 5px;
+  font-size: clamp(0.8rem, 1vw, 1.08rem);
+  font-weight: 200;
+  letter-spacing: 0.1px;
+}
+
+.arrow {
+  align-self: center;
+  width: clamp(50px, 4vw, 70px);
+  height: auto;
+  margin: 0;
+  position: relative;
+  margin-left: 15px;
+  left: 8px;
+}
