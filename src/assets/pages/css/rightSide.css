@@ -41,7 +41,7 @@
   z-index: 3;
   position: absolute;
   right: 0;
-  margin-top: -3vh;
+  margin-top: 4vh;
   margin-right: 2vw;
 }
 .filter-1nd-row {
@@ -116,7 +116,7 @@
 }
 
 .songs-container {
-  top: 23vh;
+  top: 28vh;
   margin-left: 2vw;
   margin-right: 2vw;
   position: relative;

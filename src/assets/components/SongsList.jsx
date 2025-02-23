@@ -150,7 +150,6 @@ export default function SongList() {
 
   return (
     <div>
-      <h2>Song List</h2>
       <Filter
         setSelectedFilter={handleFilterChange}
         selectedFilter={selectedFilter}
