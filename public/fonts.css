@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: "Lady Starlight";
-  src: local("Lady Starlight"), url("/Lady Starlight.otf") format("otf");
+  src: local("Lady Starlight"),
+    url("https://williamwestergard.github.io/music-website/Lady Starlight.otf")
+      format("otf");
   font-weight: normal;
   font-style: normal;
 }
