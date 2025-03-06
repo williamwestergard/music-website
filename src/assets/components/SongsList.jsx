@@ -32,10 +32,10 @@ export default function SongList() {
     },
     {
       id: 4,
-      name: "Post Malone - Remix",
+      name: "Post Malone - Wow *Remix*",
       genre: "Pop",
       filter: "remixes",
-      src: "https://www.w3schools.com/html/horse.ogg",
+      src: "https://res.cloudinary.com/dbvcotnqt/video/upload/v1741294938/music-website-songs/remixes/Post_malone_wow_remix_wilwester_nidx8h.mp3",
     },
     {
       id: 5,
@@ -88,17 +88,17 @@ export default function SongList() {
     },
     {
       id: 12,
-      name: "Billie Eilish - Remix",
+      name: "Billie Eilish - i love you *Remix*",
       genre: "Pop",
       filter: "remixes",
-      src: "https://www.w3schools.com/html/horse.ogg",
+      src: "https://res.cloudinary.com/dbvcotnqt/video/upload/v1741294302/music-website-songs/remixes/billie_eilish_i_love_you_remix_wilwester_bynnfq.mp3",
     },
     {
       id: 13,
-      name: "Katy Perry - Remix",
+      name: "Katy Perry - Hot N Cold *Remix*",
       genre: "Pop",
       filter: "remixes",
-      src: "https://www.w3schools.com/html/horse.ogg",
+      src: "https://res.cloudinary.com/dbvcotnqt/video/upload/v1741294183/music-website-songs/remixes/katy_perry_hot_n_cold_remix_wilwester_qoxbsn.mp3",
     },
     {
       id: 14,

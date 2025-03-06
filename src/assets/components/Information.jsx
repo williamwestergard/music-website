@@ -8,16 +8,13 @@ function Information() {
         <h2>Information</h2>
         <section className="information-p-container">
           <p>
-            The demos and voice notes are a work in progress and are unfinished
-            to various degrees.
-            <br /> <br /> Some songs don't have <br /> actual lyrics.
+            The songs are a work in progress and are unfinished to various
+            degrees.
+            <br /> <br /> The key might need to be transposed for the artist.
           </p>
           <p>
             You can <b>switch between </b>
             demos, voice notes, beats and remixes in the top right corner.
-            <br /> <br />
-            Psst, while you listen to the songs, <b> click here </b> to learn
-            more this Wilwester guy.
           </p>
 
           <img className="shape-img" src={Shape} />
