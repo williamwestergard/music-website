@@ -1,4 +1,15 @@
 @media screen and (max-width: 1130px) {
+  .footer-text {
+    margin: auto;
+    margin-top: 8vh;
+    font-size: 0.9rem;
+    line-height: 3.7vh;
+    width: 80%;
+  }
+
+  .songs-container:last-child {
+    margin-bottom: 40vh;
+  }
   .music-top-fixed-overlay {
     display: none;
   }
