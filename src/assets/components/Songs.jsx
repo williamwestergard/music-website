@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Playbutton from "../components/play-button.png";
 import Pausebutton from "../components/pause-button.png";
 import "../pages/css/responsive.css";
@@ -13,7 +13,6 @@ export default function Songs({
   const isPlaying = playingAudioId === song.id;
   const [progress, setProgress] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
-  const [lastClickedSongId, setLastClickedSongId] = useState(null); // Track last clicked song
 
   const toggleAudio = () => {
     if (audioRef.current) {
@@ -48,20 +47,63 @@ export default function Songs({
     }
   };
 
-  const handleSeek = (e) => {
-    // Only allow seeking if the song is either playing or paused and is the last clicked song
-    if (playingAudioId && playingAudioId !== song.id) return;
+  const [isDragging, setIsDragging] = useState(false);
+  const [wasPlaying, setWasPlaying] = useState(false); // Track if audio was playing before dragging
 
+  const handleSeek = (e) => {
+    if (!audioRef.current) return;
+
+    const progressBar = document.querySelector(".progress-bar-container");
+    if (!progressBar) return;
+
+    const rect = progressBar.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const totalWidth = progressBar.clientWidth;
+    const newTime = (clickX / totalWidth) * audioRef.current.duration;
+
+    audioRef.current.currentTime = newTime;
+    setProgress((clickX / totalWidth) * 100);
+  };
+
+  const handleMouseDown = (e) => {
     if (audioRef.current) {
-      const progressBar = e.currentTarget;
-      const clickX = e.nativeEvent.offsetX;
-      const totalWidth = progressBar.clientWidth;
-      const newTime = (clickX / totalWidth) * audioRef.current.duration;
-      audioRef.current.currentTime = newTime;
-      setProgress((clickX / totalWidth) * 100);
+      setWasPlaying(!audioRef.current.paused); // Save play state
+      audioRef.current.pause(); // Pause audio while dragging
+    }
+
+    setIsDragging(true);
+    handleSeek(e); // Seek immediately when clicked
+  };
+
+  const handleMouseMove = (e) => {
+    if (isDragging) handleSeek(e); // Update progress while dragging
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+
+    if (wasPlaying && audioRef.current) {
+      audioRef.current.play(); // Resume playback if it was playing before
     }
   };
 
+  // Global event listeners for dragging
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+    } else {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isDragging]);
+
+  // Return to initial state after song ends
   const handleEnded = () => {
     setPlayingAudioId(null);
     setProgress(0);
@@ -101,13 +143,12 @@ export default function Songs({
       {hasStarted && (
         <div
           className={`progress-bar-container ${
-            // Disable the progress bar for songs that are neither the currently playing song nor the last clicked song
             (playingAudioId && playingAudioId !== song.id && !isPlaying) ||
             playingAudioRef.current !== audioRef.current
               ? "disabled"
               : ""
           }`}
-          onClick={handleSeek}
+          onMouseDown={handleMouseDown}
         >
           <div
             className="progress-fill"
