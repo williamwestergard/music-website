@@ -13,6 +13,8 @@ export default function Songs({
   const isPlaying = playingAudioId === song.id;
   const [progress, setProgress] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [wasPlaying, setWasPlaying] = useState(false); // Track if audio was playing before dragging
 
   const toggleAudio = () => {
     if (audioRef.current) {
@@ -26,16 +28,11 @@ export default function Songs({
         ) {
           playingAudioRef.current.pause();
         }
-
         audioRef.current.play();
         setPlayingAudioId(song.id);
         playingAudioRef.current = audioRef.current;
-
         setHasStarted(true);
       }
-
-      // Track the last clicked song (even when paused)
-      setLastClickedSongId(song.id);
     }
   };
 
@@ -47,9 +44,6 @@ export default function Songs({
     }
   };
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [wasPlaying, setWasPlaying] = useState(false); // Track if audio was playing before dragging
-
   const handleSeek = (e) => {
     if (!audioRef.current) return;
 
@@ -57,7 +51,8 @@ export default function Songs({
     if (!progressBar) return;
 
     const rect = progressBar.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX; // Handle touch event
+    const clickX = clientX - rect.left;
     const totalWidth = progressBar.clientWidth;
     const newTime = (clickX / totalWidth) * audioRef.current.duration;
 
@@ -65,51 +60,54 @@ export default function Songs({
     setProgress((clickX / totalWidth) * 100);
   };
 
-  const handleMouseDown = (e) => {
+  const handleStart = (e) => {
     if (audioRef.current) {
-      setWasPlaying(!audioRef.current.paused); // Save play state
-      audioRef.current.pause(); // Pause audio while dragging
+      setWasPlaying(!audioRef.current.paused);
+      audioRef.current.pause();
     }
 
     setIsDragging(true);
-    handleSeek(e); // Seek immediately when clicked
+    handleSeek(e);
   };
 
-  const handleMouseMove = (e) => {
-    if (isDragging) handleSeek(e); // Update progress while dragging
+  const handleMove = (e) => {
+    if (isDragging) handleSeek(e);
   };
 
-  const handleMouseUp = () => {
+  const handleEnd = () => {
     setIsDragging(false);
-
     if (wasPlaying && audioRef.current) {
-      audioRef.current.play(); // Resume playback if it was playing before
+      audioRef.current.play();
     }
   };
 
-  // Global event listeners for dragging
+  // Global event listeners for both mouse and touch dragging
   useEffect(() => {
     if (isDragging) {
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
+      document.addEventListener("mousemove", handleMove);
+      document.addEventListener("mouseup", handleEnd);
+      document.addEventListener("touchmove", handleMove);
+      document.addEventListener("touchend", handleEnd);
     } else {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mousemove", handleMove);
+      document.removeEventListener("mouseup", handleEnd);
+      document.removeEventListener("touchmove", handleMove);
+      document.removeEventListener("touchend", handleEnd);
     }
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mousemove", handleMove);
+      document.removeEventListener("mouseup", handleEnd);
+      document.removeEventListener("touchmove", handleMove);
+      document.removeEventListener("touchend", handleEnd);
     };
   }, [isDragging]);
 
-  // Return to initial state after song ends
   const handleEnded = () => {
     setPlayingAudioId(null);
     setProgress(0);
   };
 
-  // Define the background color for each genre
   const genreBackgroundColor = {
     Demo: "#ffcccb",
     VoiceNote: "#f0e68c",
@@ -117,8 +115,7 @@ export default function Songs({
     Remix: "#d3f8e2",
   };
 
-  // Get the background color for the song's genre
-  const backgroundColor = genreBackgroundColor[song.genre] || "#ffffff"; // Default to white if genre not found
+  const backgroundColor = genreBackgroundColor[song.genre] || "#ffffff";
 
   return (
     <section className="songs-container">
@@ -139,7 +136,6 @@ export default function Songs({
         />
       </article>
 
-      {/* Progress bar is visible after first play, but only enabled for the last clicked song */}
       {hasStarted && (
         <div
           className={`progress-bar-container ${
@@ -148,7 +144,8 @@ export default function Songs({
               ? "disabled"
               : ""
           }`}
-          onMouseDown={handleMouseDown}
+          onMouseDown={handleStart}
+          onTouchStart={handleStart}
         >
           <div
             className="progress-fill"
