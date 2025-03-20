@@ -69,10 +69,10 @@ export default function Songs({
 
   // Define the background color for each genre
   const genreBackgroundColor = {
-    Demo: "#ffcccb",
-    VoiceNote: "#f0e68c",
-    Beat: "#f0f8ff",
-    Remix: "#d3f8e2",
+    Demo: "#e9e563",
+    VoiceNote: "#e9e563",
+    Beat: "#e9e563",
+    Remix: "#e9e563",
   };
 
   // Get the background color for the song's genre

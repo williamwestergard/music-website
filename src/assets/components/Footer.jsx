@@ -1,4 +1,4 @@
-function Footer() {
+function Footer({ showAbout, isVisible }) {
   return (
     <>
       <section className="footer">
@@ -18,11 +18,11 @@ function Footer() {
               <span style={{ fontWeight: "200" }}> William Westergård.</span>
             </p>
           </article>
-          <a href="#">
+          <a onClick={showAbout} style={{ cursor: "pointer" }}>
             <article className="wanna-collab">
               <article className="wanna-collab-info-container">
-                <h2>Wanna Work Together?</h2>
-                <p>Contact me here:</p>
+                <h2>{isVisible ? "Information" : "About Me"}</h2>
+                <p>Find out more:</p>
               </article>
               <svg
                 className="arrow"
