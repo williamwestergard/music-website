@@ -1,5 +1,6 @@
 import React from "react";
-import Shape from "../components/shape_02.png";
+// import Shape from "../components/shape_02.png";
+import Cd from "../components/rose.webm";
 
 function Information() {
   return (
@@ -16,7 +17,7 @@ function Information() {
             You can <b>switch between </b>
             demos, voice notes, beats and remixes in the top right corner.
           </p>
-          <img className="shape-img" src={Shape} />
+          <video className="shape-img" src={Cd} loop autoPlay muted />
         </section>
       </section>
     </>

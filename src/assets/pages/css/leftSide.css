@@ -57,13 +57,14 @@
 .shape-img {
   z-index: 0;
   margin-right: 2vw;
-  top: 45vh;
-  right: 3vw;
+  top: 36vh;
+  right: -1vw;
   position: absolute;
-  width: clamp(150px, 12vw, 220px);
-  height: clamp(150px, 12vw, 220px);
-  animation: rotate 35s infinite;
-  animation-timing-function: linear;
+  width: clamp(230px, 20vw, 370px);
+  height: clamp(230px, 20vw, 370px);
+  mix-blend-mode: overlay;
+  /* animation: rotate 35s infinite;
+  animation-timing-function: linear; */
 }
 
 @keyframes rotate {
@@ -78,10 +79,10 @@
 .profile-pic {
   z-index: 1;
   position: absolute;
-  top: 41vh;
+  top: 40.5vh;
   right: 3vw;
-  width: 33vh;
-  height: 33vh;
+  width: 34vh;
+  height: auto;
   filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.407));
 }
 
@@ -167,6 +168,18 @@
   margin-left: 6px;
 }
 
+.lets-talk {
+  position: relative;
+  top: -7px;
+}
+
 .lets-talk:hover {
   filter: brightness(80%);
+}
+
+.lets-talk-underline {
+  position: relative;
+  top: 1px;
+  border-top: 2px solid white;
+  width: 100px;
 }

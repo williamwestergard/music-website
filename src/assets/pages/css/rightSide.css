@@ -213,3 +213,42 @@
   pointer-events: none;
   opacity: 0.4;
 }
+
+#startpage-music-overlay {
+  z-index: 100000;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  background-color: #030303;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  border-left: 1px solid white;
+}
+
+#startpage-music-overlay h1 {
+  font-size: 4.1rem;
+}
+
+#startpage-music-overlay button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  background: white;
+  border: 2px solid rgb(231, 231, 231);
+
+  padding: 1vh 2.8vh;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+
+#startpage-music-overlay button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.2s;
+}

@@ -13,13 +13,14 @@ function About_Me() {
           <h2>About me</h2>
           <section className="information-p-container">
             <p>
-              A musician based in Stockholm, Sweden.
-              <br /> <br /> I can play guitar, bass and keyboard. I'm mainly
-              using Logic Pro X.
+              I'm a musician based in Stockholm, Sweden.
+              <br /> <br /> I play guitar, bass and keyboard and have been
+              making music consistently for over 10 years.
             </p>
             <p>
-              Do you want to work on these songs? Or do you need help with your
-              own projects?
+              Do you want to work on these songs?
+              <br />
+              Or do you need help with your own projects?
               <br />
               <br />
               <a
@@ -33,6 +34,7 @@ function About_Me() {
                   className="arrow-diagonal"
                   alt="Arrow"
                 />
+                <div className="lets-talk-underline"></div>
               </a>
             </p>
 
