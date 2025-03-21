@@ -57,11 +57,11 @@
 .shape-img {
   z-index: 0;
   margin-right: 2vw;
-  top: 36vh;
-  right: -1vw;
+  top: 46.3vh;
+  right: 2vw;
   position: absolute;
-  width: clamp(230px, 20vw, 370px);
-  height: clamp(230px, 20vw, 370px);
+  width: clamp(190px, 20vw, 230px);
+  height: clamp(190px, 20vw, 230px);
   mix-blend-mode: overlay;
   /* animation: rotate 35s infinite;
   animation-timing-function: linear; */
@@ -179,6 +179,7 @@
 
 .lets-talk-underline {
   position: relative;
+  display: block;
   top: 1px;
   border-top: 2px solid white;
   width: 100px;

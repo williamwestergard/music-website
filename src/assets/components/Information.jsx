@@ -1,6 +1,6 @@
 import React from "react";
 // import Shape from "../components/shape_02.png";
-import Cd from "../components/rose.webm";
+import Cd from "../components/cd.webm";
 
 function Information() {
   return (

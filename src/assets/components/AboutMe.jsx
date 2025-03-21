@@ -15,7 +15,7 @@ function About_Me() {
             <p>
               I'm a musician based in Stockholm, Sweden.
               <br /> <br /> I play guitar, bass and keyboard and have been
-              making music consistently for over 10 years.
+              making music consistently for over 15 years.
             </p>
             <p>
               Do you want to work on these songs?
@@ -34,7 +34,7 @@ function About_Me() {
                   className="arrow-diagonal"
                   alt="Arrow"
                 />
-                <div className="lets-talk-underline"></div>
+                <span className="lets-talk-underline"></span>
               </a>
             </p>
 

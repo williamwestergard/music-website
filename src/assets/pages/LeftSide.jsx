@@ -17,13 +17,13 @@ function LeftSide() {
       <main className="left-side-container">
         <Header />
 
-        <div style={{ display: isVisible ? "none" : "block" }}>
+        <span style={{ display: isVisible ? "none" : "block" }}>
           <Information />
-        </div>
+        </span>
 
-        <div style={{ display: isVisible ? "block" : "none" }}>
+        <span style={{ display: isVisible ? "block" : "none" }}>
           <About_Me />
-        </div>
+        </span>
 
         <Footer showAbout={showAbout} isVisible={isVisible} />
       </main>
