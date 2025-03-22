@@ -22,7 +22,6 @@ function RightSide() {
         <MusicHeader />
         <SongsList />
         <br />
-
         <p
           className="footer-text"
           style={{ color: "#484848", textAlign: "center" }}

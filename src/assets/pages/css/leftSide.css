@@ -54,6 +54,23 @@
   margin-right: 5vw;
 }
 
+#img-loader-container {
+  position: "absolute";
+}
+
+.loader-spinner {
+  z-index: 0;
+  margin-right: 2vw;
+  top: 55vh;
+  right: 6.5vw;
+  position: absolute;
+  width: clamp(50px, 20vw, 70px);
+  height: clamp(50px, 20vw, 70px);
+  mix-blend-mode: overlay;
+  filter: opacity(30%);
+  transition: "opacity 0.3s ease";
+}
+
 .shape-img {
   z-index: 0;
   margin-right: 2vw;

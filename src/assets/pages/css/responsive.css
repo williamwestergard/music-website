@@ -4,11 +4,11 @@
   }
 
   .left-side-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 100%;
-    position: absolute;
+    display: none;
+  }
+
+  .music-top-fixed-overlay {
+    display: none;
   }
 
   .header {
@@ -46,7 +46,7 @@
     flex-direction: column;
     flex: 1;
     position: relative;
-    top: 33vh;
+    top: 5vh;
   }
 
   .filter {
@@ -167,11 +167,23 @@
     padding: 0;
     margin: 0;
   }
+
+  .footer-text {
+    margin-top: 8vh;
+  }
 }
 
 @media screen and (max-width: 340px) {
   body {
     overflow: auto;
+  }
+
+  .left-side-container {
+    display: none;
+  }
+
+  .music-top-fixed-overlay {
+    display: none;
   }
 
   .left-side-container {
