@@ -40,7 +40,7 @@ function Filter({ setSelectedFilter, selectedFilter }) {
             fontWeight: selectedFilter === "voice-note" ? "600" : "normal",
           }}
         >
-          <p>Voice Notes</p>
+          <p>Acoustic</p>
         </span>
       </section>
 

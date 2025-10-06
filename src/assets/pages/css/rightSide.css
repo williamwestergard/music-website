@@ -84,15 +84,15 @@
 .music-header {
   z-index: 2;
   position: absolute;
-  margin-top: 10vh;
-  margin-left: 2vw;
+  margin-top: 12vh;
+  margin-left: 4vw;
   width: 100%;
   top: 0;
   line-height: 10vh;
 }
 .music-header h1 {
   color: #030303;
-  font-size: clamp(4rem, 4.5vw, 5.4rem);
+  font-size: clamp(4rem, 4.2vw, 4.8rem);
   font-weight: 00;
   margin: 0;
   padding: 0;
@@ -101,9 +101,10 @@
 .music-header p {
   color: #030303;
   line-height: 0vh;
-  font-size: clamp(1.5rem, 1.6vw, 1.9rem);
+  font-size: clamp(1.4rem, 1.6vw, 1.8rem);
   font-weight: 400;
   position: relative;
+  top: -6px;
   left: 5px;
 }
 
@@ -118,6 +119,7 @@
 
 .songs-container {
   overflow: hidden;
+  background-color: rgb(252, 245, 246);
   top: 28vh;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -126,9 +128,11 @@
   flex-direction: row;
   align-items: center;
   border: 3px solid #030303;
-  padding: 1.5vh 4.2vh;
+  width: 75%;
+  padding: 1.4vh 4.2vh;
   border-radius: 1000px;
-  margin-bottom: 2.8vh;
+  margin: auto;
+  margin-bottom: 2vh;
 }
 .songs-container:last-child {
   margin-bottom: 30vh;

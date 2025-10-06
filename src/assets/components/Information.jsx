@@ -10,9 +10,8 @@ function Information() {
         <h2>Information</h2>
         <section className="information-p-container">
           <p>
-            These songs are a work in progress and are unfinished to various
-            degrees.
-            <br /> <br /> They're meant to be performed by other artists.
+            These songs are a work in progress, both in production and lyrics.
+            <br /> <br /> They might need to be transposed for the artist.
           </p>
           <p>
             You can <b>switch between </b>

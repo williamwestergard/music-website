@@ -24,9 +24,9 @@ function RightSide() {
         <br />
         <p
           className="footer-text"
-          style={{ color: "#484848", textAlign: "center" }}
+          style={{ color: "#484848", textAlign: "center", fontSize: ".9rem" }}
         >
-          <i>@Wilwester 2025</i>
+          <i>@William Westergård 2025</i>
         </p>
         <br />
         <br />

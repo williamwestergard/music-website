@@ -14,13 +14,13 @@ function Footer({ showAbout, isVisible }) {
                 Note:
               </b>
               <br />
-              All songs, except remixes, were made and performed by
+              All songs, except remixes, <br /> were made by
               <span style={{ fontWeight: "200" }}> William Westergård.</span>
             </p>
           </article>
           <a onClick={showAbout} style={{ cursor: "pointer" }}>
             <article className="wanna-collab">
-              <article className="wanna-collab-info-container">
+              <article className="wanna-collab.container">
                 <h2>{isVisible ? "Information" : "About Me"}</h2>
                 <p>Find out more:</p>
               </article>

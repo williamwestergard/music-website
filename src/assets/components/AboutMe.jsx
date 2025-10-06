@@ -14,13 +14,13 @@ function About_Me() {
           <section className="information-p-container">
             <p>
               I'm a musician based in Stockholm, Sweden.
-              <br /> <br /> I play guitar, bass and keyboard and have been
-              making music consistently for over 15 years.
+              <br /> <br /> Right now I mainly make pop and indie music, but
+              dabble in many genres.
             </p>
             <p>
-              Do you want to work on these songs?
+              The instruments I play are guitar, bass and keyboard.
               <br />
-              Or do you need help with your own projects?
+              Hit me up if you wanna work together.
               <br />
               <br />
               <a
