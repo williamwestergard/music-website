@@ -1,3 +1,3 @@
 # React 
 
-This website is a portfolio for songs that I've made.
+This webpage is a portfolio for some songs I've made.
