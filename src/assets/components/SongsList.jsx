@@ -63,7 +63,7 @@ export default function SongList() {
       name: "Last Dance",
       genre: "Demo",
       filter: "demo",
-      src: "https://res.cloudinary.com/dbvcotnqt/video/upload/v1759817307/music-website-songs/Demos/Last_Dance.mp3",
+      src: "https://res.cloudinary.com/dbvcotnqt/video/upload/v1759820089/music-website-songs/Demos/Last_Dance.mp3",
     },
 
     {
